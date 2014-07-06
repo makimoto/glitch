@@ -40,8 +40,8 @@ var commandRepeat = cli.Command{
 	Flags: []cli.Flag{
 		cli.StringFlag{"o, output", "output.jpg", "Output file"},
 		cli.IntFlag{"n, number", 3, "Number of byte repeats"},
-		cli.IntFlag{"e, header-size-rate", 5, "Percentage of header bytes (10: automatic)"},
-		cli.IntFlag{"b, block-size", 0, "Size of block bytes (0: automatic)"},
+		cli.IntFlag{"e, header-size-rate", 5, "Percentage of header bytes"},
+		cli.IntFlag{"b, block-size", 200, "Size of block bytes"},
 	},
 }
 
