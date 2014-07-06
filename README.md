@@ -10,6 +10,12 @@ $ glitch sed -f a -t b -e 15 -o glitched.jpg /path/to/yourfile.jpg
 $ glitch repeat -e 15 -b 200 -n 10 -o glitched.jpg /path/to/yourfile.jpg
 ```
 
+## Installation
+
+```
+$ go get github.com/makimoto/glitch
+```
+
 ## Usage
 
 ```
