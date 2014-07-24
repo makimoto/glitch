@@ -60,7 +60,8 @@ func assert(err error) {
 func doSed(c *cli.Context) {
 	fi, err := os.Open(c.Args()[0])
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+		os.Exit(1)
 	}
 
 	defer func() {
@@ -71,7 +72,8 @@ func doSed(c *cli.Context) {
 
 	inputBytes, err := ioutil.ReadAll(fi)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+		os.Exit(1)
 	}
 
 	headerSizeRate := c.Int("e")
@@ -104,7 +106,8 @@ func doSed(c *cli.Context) {
 func doRepeat(c *cli.Context) {
 	fi, err := os.Open(c.Args()[0])
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+		os.Exit(1)
 	}
 
 	defer func() {
@@ -115,7 +118,8 @@ func doRepeat(c *cli.Context) {
 
 	inputBytes, err := ioutil.ReadAll(fi)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+		os.Exit(1)
 	}
 
 	number := c.Int("n")
