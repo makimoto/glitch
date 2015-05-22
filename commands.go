@@ -24,10 +24,10 @@ var commandSed = cli.Command{
 `,
 	Action: doSed,
 	Flags: []cli.Flag{
-		cli.StringFlag{"o, output", "output.jpg", "Output file"},
-		cli.StringFlag{"f, from", "", "character or string to be replaced from (default: random)"},
-		cli.StringFlag{"t, to", "", "character or string to be replaced with (default: random)"},
-		cli.IntFlag{"e, header-size-rate", 5, "Percentage of header bytes (10: automatic)"},
+    cli.StringFlag{Name: "o, output", Value: "output.jpg", Usage: "Output file"},
+    cli.StringFlag{Name: "f, from", Value: "", Usage: "character or string to be replaced from (default: random)"},
+    cli.StringFlag{Name: "t, to", Value: "", Usage: "character or string to be replaced with (default: random)"},
+    cli.IntFlag{Name: "e, header-size-rate", Value: 5, Usage: "Percentage of header bytes (10: automatic)"},
 	},
 }
 
@@ -38,10 +38,10 @@ var commandRepeat = cli.Command{
 `,
 	Action: doRepeat,
 	Flags: []cli.Flag{
-		cli.StringFlag{"o, output", "output.jpg", "Output file"},
-		cli.IntFlag{"n, number", 3, "Number of byte repeats"},
-		cli.IntFlag{"e, header-size-rate", 5, "Percentage of header bytes"},
-		cli.IntFlag{"b, block-size", 200, "Size of block bytes"},
+    cli.StringFlag{Name: "o, output", Value: "output.jpg", Usage: "Output file"},
+    cli.IntFlag{Name: "n, number", Value: 3, Usage: "Number of byte repeats"},
+    cli.IntFlag{Name: "e, header-size-rate", Value: 5, Usage: "Percentage of header bytes"},
+    cli.IntFlag{Name: "b, block-size", Value: 200, Usage: "Size of block bytes"},
 	},
 }
 
