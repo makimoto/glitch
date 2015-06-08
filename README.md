@@ -38,6 +38,28 @@ GLOBAL OPTIONS:
    --help, -h		show help
 ```
 
+## Samples
+
+### sed glitch
+
+```
+glitch sed -f a -t b -o sed.jpg original.jpg
+```
+
+![](./samples/sed.jpg)
+
+### repeat glitch
+
+```
+glitch repeat -n 5 -b 400 original.jpg
+```
+
+![](./samples/repeat.jpg)
+
+### the original image
+
+![](./samples/original.jpg)
+
 ## Author
 
 [Shimpei Makimoto](http://shimpei.makimoto.org)
